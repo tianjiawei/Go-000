@@ -1,0 +1,193 @@
+apollo:
+  url: http://39.106.112.249:8080
+  appId: 20190912
+
+
+hashids_salt: youthldzs
+share_url_hashids_salt: ldzsyouth
+hashids_len_article: 50
+hostname: https://kd.youth.cn
+share_hostname: https://focus.youth.cn
+ali_recommend_url: http://recommend-full-article.zqkd-recommend/api/rec/little_video_feed
+ali_recommend_little_video_shop_url: http://recommend-video-shop.zqkd-recommend/api/rec/little_video_feed
+ali_recommend_url_b: http://recommend-old-b.zqkd-recommend/api/rec/little_video_feed
+ali_recommend_url_wcf: http://recommend-wcf.zqkd-recommend/api/rec/little_video_feed
+ali_recommend_url_wcf_scatter: http://recommend-wcf-scatter.zqkd-recommend/api/rec/little_video_feed
+ali_recommend_url_lv_cf_fm: http://recommend-lv-cf-fm.zqkd-recommend/api/rec/little_video_feed
+ali_recommend_url_recommend_bloomfilter: http://recommend-bloomfilter.zqkd-recommend/api/rec/little_video_feed
+
+ali_recommend_url_bucket_0: http://recommend-full-article.zqkd-recommend
+ali_recommend_url_bucket_8: http://recommend-fm-article-v3.zqkd-recommend
+ali_recommend_url_bucket_9: http://recommend-supply-article.zqkd-recommend
+ali_recommend_url_bucket_11: http://recommend-faiss-dnn.zqkd-recommend
+ali_recommend_url_bucket_12: http://recommend-hot-rank.zqkd-recommend
+ali_recommend_url_bucket_13: http://recommend-click-relate.zqkd-recommend
+ali_recommend_url_bucket_14: http://recommend-is-time-rank.zqkd-recommend
+ali_recommend_url_bucket_15: http://recommend-fm-plus.zqkd-recommend
+ali_recommend_url_bucket_17: http://recommend-baidu-up.zqkd-recommend
+ali_recommend_url_bucket_18_19: http://recommend-hot-v5.zqkd-recommend
+ali_recommend_url_bucket_20: http://recommend-fm-plus-hour.zqkd-recommend
+
+# 文章详情页推荐
+article_related_url: http://recommend-full-article.zqkd-recommend
+
+ali_video_recommend_url: http://recommend-full-article.zqkd-recommend/api/rec/video_relate
+
+db:
+  max_idle_conn: 3
+  max_open_conn: 10
+article_db:
+  hostname: rm-2ze32sc0257r17d29rw.mysql.rds.aliyuncs.com
+  db: zqkd-article
+  user: kd_article
+  password: KD!$article1223
+
+drds_db:
+  hostname: rm-2ze32sc0257r17d29rw.mysql.rds.aliyuncs.com
+  db: zqkd-article
+  user: kd_article
+  password: KD!$article1223
+
+user_relate_db:
+  hostname: drdsbgga15e6v999.drds.aliyuncs.com
+  db: kd_user
+  user: user
+  password: SED@!!@QWDSSD@#xxW2sX
+
+feed_detail_db:
+  hostname: rm-2ze24i67pg00ceytm.mysql.rds.aliyuncs.com
+  db: zqkd_article
+  user: zqkdadmin
+  password: 2008@com
+
+main_db:
+  hostname: rm-2zem31dvaj6cr1302rw.mysql.rds.aliyuncs.com
+  db: zqkd
+  user: zqkd_master
+  password: ZqkD!$master120593
+
+recommend_db:
+  hostname: u34gjze6o2c74f3xvvjv.rwlb.rds.aliyuncs.com
+  db: recommend
+  user: recommend
+  password: DFWERV#@@!DF3DsAQZSxxE%$2SWXZA
+
+comment_mongodb:
+  hostname: dds-2ze46df37ad156b42.mongodb.rds.aliyuncs.com,dds-2ze46df37ad156b41.mongodb.rds.aliyuncs.com
+  port: 3717
+  db: zqkd
+  username: root
+  db_name: admin
+  password: aujJxndwjT2dx4ggwxtj
+
+redis_main:
+  host: r-2ze3d5ffa6ad3d64.redis.rds.aliyuncs.com:6379
+  password: zqPassw0rd
+  db_index: 22
+  max_idle: 10
+  max_active: 200
+
+redis_main_2:
+  host: r-2zeu3quvc874gwso47.redis.rds.aliyuncs.com:6379
+  password: e354Gbh6H7j7jffGynOddsx
+  db_index: 22
+  max_idle: 10
+  max_active: 200
+
+redis_user:
+  host: r-2zee1cd961613f84.redis.rds.aliyuncs.com:6379
+  password: jio819xndwjT2dx909wxtUSER
+  db_index: 22
+  max_idle: 10
+  max_active: 200
+
+redis_user_relation:
+  host: master-02.redis.rds.aliyuncs.com:6379
+  password: zqkdRedisLdzs3f4en6r9t000
+  db_index: 22
+  max_idle: 10
+  max_active: 200
+
+redis_article:
+  host: r-2zee5921403128e4.redis.rds.aliyuncs.com:6379
+  password: Wzhang2017XXinMM
+  db_index: 22
+  max_idle: 10
+  max_active: 200
+
+redis_article_2:
+  host: r-2zelnsz1kh1zw3tvrq.redis.rds.aliyuncs.com:6379
+  password: articleZqkd2019sxdrtRedS
+  db_index: 22
+  max_idle: 10
+  max_active: 200
+
+redis_video_relate:
+  host: r-2zetqe2z88njn0hsavpd.redis.rds.aliyuncs.com:6379
+  #  内网地址
+  #  host: r-2zetqe2z88njn0hsav.redis.rds.aliyuncs.com:6379
+  password: DSFEWFGWEFWEd3DsxSD3SxSC
+  db_index: 1
+  max_idle: 10
+  max_active: 200
+
+redis_bloom:
+  host: r-2zeexzpfm7jskgv8zg.redis.rds.aliyuncs.com:6379
+  password: "@#D!fhrtERTrs3WESFfgfdGER"
+  db_index: 22
+  max_idle: 10
+  max_active: 200
+
+haotu:
+  access_key: yl3a0hoifg6s
+  access_token: epujv0imrwkftlgg7uqt9e5w4caymw9c
+
+image:
+  width: 640
+  height: 360
+
+direct_play: 0
+show_pgc_subscribe: 0
+video_preloading_flag: 0
+
+#haotu_url: https://testapi.yladm.com/openv2/video/play
+haotu_url: https://videoapiv2.yladm.com/openv2/video/play
+
+url_key: 123456
+
+redis_prefix: weixinrd_
+redis_prefix_new: content
+
+cover_image_sufix: /196x196
+max_big_img_ad_num: 1
+article_detail_share_title: 分享赢好礼
+article_detail_share_title_not_bsgs: 分享+500青豆
+article_detail_share_title_on: 1
+article_detail_is_native: 1
+
+relate_red_packet_task_id: 277
+
+account_map:
+  2: "今日头条"
+  10: "自媒体"
+  14: "小年糕短视频"
+  15: "种子短视频"
+  16: "西瓜短视频"
+  17: "人民日报客户端"
+  18: "央视新闻客户端"
+  19: "中国新闻网客户端"
+  25: "好兔短视频"
+  27: "人民网"
+  30: "微信新榜"
+  31: "好看短视频"
+  32: "今日头条极速版小视频"
+  35: "快手小视频"
+  36: "抖音小视频"
+  37: "腾讯视频亲情版短视频"
+  38: "玉米奇趣微信小视频"
+  44: "小猫看看"
+  45: "掌中看点"
+  46: "微叭"
+  47: "微小宝(微信公众号)"
+  48: "头条本地化"
+  49: "太平洋电脑网"
