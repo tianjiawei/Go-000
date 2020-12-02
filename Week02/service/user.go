@@ -12,8 +12,16 @@ func NewUserSrv(userDao *dao.UserDao) *UserSrv {
 	}
 }
 
-func (u *UserSrv) GetUserById(id int64) (data interface{}) {
+func (u *UserSrv) GetUserById(id int64) (map[string]interface{}, error) {
 	user, e := u.UserDao.GetUserById(id)
+	data := make(map[string]interface{})
+	if e != nil {
+		return data, nil
+	}
 
-	return
+	data["uid"] = user.Uid
+	data["name"] = user.Name
+	data["avatar"] = user.Avatar
+
+	return data, nil
 }

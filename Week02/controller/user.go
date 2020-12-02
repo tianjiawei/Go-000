@@ -23,6 +23,15 @@ func (u *UserController) GetUser(c *gin.Context) {
 	if e != nil {
 		//todo
 	}
-	resData := u.UserSrv.GetUserById(uid)
+	data, e := u.UserSrv.GetUserById(uid)
+	resData := make(map[string]interface{})
+	if e != nil {
+		resData["code"] = 400
+		resData["msg"] = "return is empty！"
+	} else {
+		resData["code"] = 200
+		resData["msg"] = "success！"
+	}
+	resData["data"] = data
 	c.JSON(http.StatusOK, resData)
 }
