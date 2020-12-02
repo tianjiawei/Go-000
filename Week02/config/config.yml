@@ -3,7 +3,7 @@ db:
   max_open_conn: 10
 
 user_db:
-  hostname: rm-2ze1gfhk0hmq7l3ovo.mysql.rds.aliyuncs.com
-  db: zqkd_master
-  user: zqkdadmin
-  password: 2008@com
+  hostname: 127.0.0.1
+  db: user
+  user: root
+  password: 123456
