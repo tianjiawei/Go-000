@@ -3,7 +3,6 @@ package service
 import (
 	"Go-000/Week04/internal/dao"
 	"github.com/gin-gonic/gin"
-	jsoniter "github.com/json-iterator/go"
 	"net/http"
 	"strconv"
 )
@@ -22,15 +21,18 @@ func (us *UserSrv) GetUserInfo(c *gin.Context) {
 	uid := c.Request.FormValue("uid")
 	if uid == "" {
 		c.JSON(http.StatusBadRequest, "uid is empty")
+		return
 	}
 	uidInt, err := strconv.ParseInt(uid, 10, 64)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, "uid is wrong!")
+		return
 	}
 	user := us.userDao.GetUserById(uidInt)
-	user.PassWord = ""
-
-	userJson, _ := jsoniter.Marshal(user)
-	c.JSON(http.StatusOK, userJson)
+	userObj := make(map[string]interface{})
+	userObj["id"] = user.Id
+	userObj["user_name"] = user.UserName
+	userObj["age"] = user.Age
+	c.JSON(http.StatusOK, userObj)
 	return
 }

@@ -1,20 +1,21 @@
 package dao
 
 import (
+	"Go-000/Week04/internal/db/mysql"
 	"Go-000/Week04/internal/model"
-	"github.com/jinzhu/gorm"
 )
 
 type UserDao struct {
-	db *gorm.DB
+	db *mysql.UserDB
 }
 
-func NewUserDao(db *gorm.DB) *UserDao {
+func NewUserDao(db *mysql.UserDB) *UserDao {
 	return &UserDao{
 		db: db,
 	}
 }
 
 func (u *UserDao) GetUserById(uid int64) (user model.User) {
+	u.db.Db.Where("id = ?", uid).Find(&user)
 	return
 }

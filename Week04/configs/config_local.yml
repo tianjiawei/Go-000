@@ -1,0 +1,12 @@
+user_db:
+  hostname: rm-2ze1gfhk0hmq7l3ov.mysql.rds.aliyuncs.com
+  db: zqkd_master
+  user: zqkdadmin
+  password: 2008@com
+
+redis_main:
+  host: 127.0.0.1:6379
+  password: 123456
+  db_index: 22
+  max_idle: 10
+  max_active: 200

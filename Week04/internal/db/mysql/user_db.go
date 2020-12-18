@@ -15,10 +15,10 @@ type UserDB struct {
 }
 
 func NewUserDB(conf *viper.Viper) *UserDB {
-	user := conf.GetString("main_db.user")
-	pwd := conf.GetString("main_db.password")
-	hostname := conf.GetString("main_db.hostname")
-	db := conf.GetString("main_db.db")
+	user := conf.GetString("user_db.user")
+	pwd := conf.GetString("user_db.password")
+	hostname := conf.GetString("user_db.hostname")
+	db := conf.GetString("user_db.db")
 	url := fmt.Sprintf(`%s:%s@tcp(%s)/%s?parseTime=true`, user, pwd, hostname, db)
 	mainDB, err := gorm.Open("mysql", url)
 	if err != nil {
